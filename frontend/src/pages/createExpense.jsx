@@ -23,7 +23,7 @@ const CreateExpense = () => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/expense/", data)
+      .post("https://mern-expense-manager-app.vercel.app/expense/", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Expense Created Successfully", { variant: "success" });

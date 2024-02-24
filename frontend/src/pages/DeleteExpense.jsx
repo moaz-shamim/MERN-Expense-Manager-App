@@ -13,7 +13,7 @@ const DeleteExpense = () => {
   const handleDeleteExpense = () => {
     setLoading(true);
     axios
-      .delete(`http://localhost:5555/expense/${id}`)
+      .delete(`https://mern-expense-manager-app.vercel.app/expense/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Expense Deleted Successfully", { variant: "success" });

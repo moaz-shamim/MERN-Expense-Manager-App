@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5555/expense/")
+      .get("https://mern-expense-manager-app.vercel.app/expense/")
       .then((response) => {
         setExpenses(response.data.data);
         setLoading(false);

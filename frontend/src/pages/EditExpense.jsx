@@ -18,7 +18,7 @@ const EditExpense = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5555/expense/${id}`)
+      .get(`https://mern-expense-manager-app.vercel.app/expense/${id}`)
       .then((response) => {
         setItem(response.data.item);
         setCategory(response.data.category);
@@ -43,7 +43,7 @@ const EditExpense = () => {
     };
     setLoading(true);
     axios
-      .put(`http://localhost:5555/expense/${id}`, data)
+      .put(`https://mern-expense-manager-app.vercel.app/expense/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Expense Edited Successfully", { variant: "success" });
